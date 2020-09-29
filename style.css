@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  /* border: solid black 1px; */
+}
+
+@media only screen and (max-width: 768px) {
+  .body {
+    display: block;
+  }
+
+  #header-img {
+    margin-top: 15%;
+  }
+}
+
+body  {
+  display: grid;
+  grid-template-rows: fr, fr, fr, fr;
+  grid-template-columns: fr, fr, fr;
+  grid-template-areas:
+  "header header header"
+  "main main main"
+  "video video video"
+  "footer footer email";
+  justify-content: space-around;
+  grid-gap: 20px;
+  color: white;
+  background-color: hsl(0, 100%, 28%);
+  font-family: verdana, sans-serif;
+}
+
+#header {
+  display:flex;
+  grid-area: header;
+}
+
+#nav-bar {
+  position: fixed;
+  right: 10%;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#main {
+  grid-area: main;
+  border: solid white 1px;
+  padding-left: 5%;
+}
+
+#video-player {
+  grid-area: video;
+}
+
+#email-form {
+  grid-area: email;
+  padding-top: 5%;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+button {
+  background-color: gold;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+a:link, a:visited {
+  color: gold;
+}
+
+a:focus, a:hover, a:active {
+  color: grey;
+}
